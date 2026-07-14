@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "skillflow-xiaohongshu": {
+      "command": "node",
+      "args": [
+        "./mcp/start.mjs"
+      ],
+      "cwd": "."
+    }
+  }
+}

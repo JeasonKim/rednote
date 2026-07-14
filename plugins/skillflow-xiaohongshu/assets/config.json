@@ -1,0 +1,13 @@
+{
+  "technicalName": "skillflow-xiaohongshu",
+  "displayName": "小红书单篇笔记生产流",
+  "shortDescription": "面向固定小红书账号的单篇图文笔记生产流程。流程先在选题策划阶段初始化并复用账号定位，再完成文案创作、连续配图生成和基于模板脚本的仿小红书预览页渲染，确保每篇笔记具备明确选题角度、平台化文案、统一视觉卡片和可复制发布文案。",
+  "longDescription": "面向固定小红书账号的单篇图文笔记生产流程。流程先在选题策划阶段初始化并复用账号定位，再完成文案创作、连续配图生成和基于模板脚本的仿小红书预览页渲染，确保每篇笔记具备明确选题角度、平台化文案、统一视觉卡片和可复制发布文案。",
+  "version": "1.0.0",
+  "monetizationMode": "free",
+  "apiBase": "http://127.0.0.1:3000",
+  "publicationVersionId": "70467152854909952",
+  "brandColor": "#2563EB",
+  "logoPath": "/plugin-assets/logo.jpg",
+  "profileEndpoint": "/creator-commission/profiles/1"
+}
