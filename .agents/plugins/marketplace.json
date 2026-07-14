@@ -1,0 +1,20 @@
+{
+  "name": "skillflow-xiaohongshu",
+  "interface": {
+    "displayName": "Zara Plugins"
+  },
+  "plugins": [
+    {
+      "name": "skillflow-xiaohongshu",
+      "source": {
+        "source": "local",
+        "path": "./plugins/skillflow-xiaohongshu"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
