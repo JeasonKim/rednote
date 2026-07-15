@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "wf-mr3byfwob5fe373e": {
+      "command": "node",
+      "args": [
+        "./mcp/start.mjs"
+      ],
+      "cwd": "."
+    }
+  }
+}

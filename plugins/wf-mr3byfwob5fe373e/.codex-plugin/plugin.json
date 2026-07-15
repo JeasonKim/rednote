@@ -1,0 +1,37 @@
+{
+  "name": "wf-mr3byfwob5fe373e",
+  "version": "1.0.0",
+  "description": "面向固定小红书账号的单篇图文笔记生产流程",
+  "author": {
+    "name": "Zara"
+  },
+  "homepage": "https://github.com/zarazhangrui",
+  "keywords": [
+    "workflow",
+    "skillflow",
+    "codex",
+    "wf-mr3byfwob5fe373e"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "小红书创作",
+    "shortDescription": "面向固定小红书账号的单篇图文笔记生产流程",
+    "longDescription": "面向固定小红书账号的单篇图文笔记生产流程。流程先在选题策划阶段初始化并复用账号定位，再完成文案创作、连续配图生成和基于模板脚本的仿小红书预览页渲染，确保每篇笔记具备明确选题角度、平台化文案、统一视觉卡片和可复制发布文案。",
+    "developerName": "Zara",
+    "category": "Productivity",
+    "capabilities": [
+      "Single Skill Flow workflow",
+      "Task execution",
+      "Native workflow dashboard"
+    ],
+    "defaultPrompt": [
+      "Run 小红书创作 for my task.",
+      "Show the latest 小红书创作 task status.",
+      "Open the 小红书创作 dashboard."
+    ],
+    "brandColor": "#2563EB",
+    "composerIcon": "./assets/logo.jpg",
+    "logo": "./assets/logo.jpg"
+  }
+}
