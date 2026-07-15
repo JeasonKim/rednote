@@ -1,11 +1,11 @@
 {
   "name": "wf-mr3byfwob5fe373e",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "面向固定小红书账号的单篇图文笔记生产流程",
   "author": {
-    "name": "Zara"
+    "name": "老徐说AI"
   },
-  "homepage": "https://github.com/zarazhangrui",
+  "homepage": "https://github.com/xuntianx",
   "keywords": [
     "workflow",
     "skillflow",
@@ -18,7 +18,7 @@
     "displayName": "小红书创作",
     "shortDescription": "面向固定小红书账号的单篇图文笔记生产流程",
     "longDescription": "面向固定小红书账号的单篇图文笔记生产流程",
-    "developerName": "Zara",
+    "developerName": "老徐说AI",
     "category": "Productivity",
     "capabilities": [
       "Single Skill Flow workflow",

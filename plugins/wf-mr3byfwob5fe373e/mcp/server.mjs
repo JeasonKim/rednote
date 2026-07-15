@@ -3,23 +3,25 @@ import { cpSync, existsSync, mkdirSync, readFileSync, readdirSync, rmSync, write
 import { createRequire } from 'node:module'
 import { homedir } from 'node:os'
 import { dirname, extname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
 import { RESOURCE_MIME_TYPE, registerAppResource, registerAppTool } from '@modelcontextprotocol/ext-apps/server'
 import { McpServer } from '@modelcontextprotocol/sdk/server/mcp.js'
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js'
 import { z } from 'zod'
+import { resolveCreatorPluginRuntimePaths } from './lib/runtime-paths.mjs'
 
-const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
+const { pluginRoot: PLUGIN_ROOT, dashboardIndexPath: DASHBOARD_INDEX_PATH } = resolveCreatorPluginRuntimePaths({
+  serverModuleUrl: import.meta.url,
+  environment: process.env
+})
 const require = createRequire(import.meta.url)
-const CONFIG = JSON.parse(readFileSync(join(ROOT, 'assets', 'config.json'), 'utf8'))
-const WORKFLOW = JSON.parse(readFileSync(join(ROOT, 'assets', 'workflow.json'), 'utf8'))
-const PROFILE_SNAPSHOT = JSON.parse(readFileSync(join(ROOT, 'assets', 'creator.json'), 'utf8'))
+const CONFIG = JSON.parse(readFileSync(join(PLUGIN_ROOT, 'assets', 'config.json'), 'utf8'))
+const WORKFLOW = JSON.parse(readFileSync(join(PLUGIN_ROOT, 'assets', 'workflow.json'), 'utf8'))
+const PROFILE_SNAPSHOT = JSON.parse(readFileSync(join(PLUGIN_ROOT, 'assets', 'creator.json'), 'utf8'))
 const DATA_ROOT = process.env.SKILLFLOW_PLUGIN_DATA_ROOT?.trim() || join(homedir(), '.skillflow', 'codex', CONFIG.technicalName)
 const TASK_DIR = join(DATA_ROOT, 'tasks')
 const CREDENTIALS_PATH = join(DATA_ROOT, 'credentials.json')
 const RUNTIME_PATH = join(DATA_ROOT, 'runtime.json')
-const DASHBOARD_INDEX_PATH = join(ROOT, 'dashboard', 'index.html')
-const LOGO_PATH = join(ROOT, 'assets', 'logo' + extname(CONFIG.logoPath))
+const LOGO_PATH = join(PLUGIN_ROOT, 'assets', 'logo' + extname(CONFIG.logoPath))
 const WIDGET_URI = 'ui://widget/' + CONFIG.technicalName + '/workflow-dashboard-' + encodeURIComponent(String(CONFIG.version)) + '.html'
 const closedWorldReadAnnotations = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false }
 const externalReadAnnotations = { readOnlyHint: true, destructiveHint: false, idempotentHint: true, openWorldHint: false }
@@ -557,7 +559,7 @@ function initializeTaskWorkspace(task) {
   for (const node of WORKFLOW.nodes) {
     const taskNodeDir = join(taskDir, 'nodes', node.workspace_key)
     const contextDir = join(taskNodeDir, 'Context')
-    const bundledContextDir = join(ROOT, 'workflow', 'nodes', node.workspace_key, 'Context')
+    const bundledContextDir = join(PLUGIN_ROOT, 'workflow', 'nodes', node.workspace_key, 'Context')
     const shouldRestoreContext = !existsSync(contextDir)
     if (shouldRestoreContext) mkdirSync(contextDir, { recursive: true })
     mkdirSync(join(taskNodeDir, 'outputs'), { recursive: true })
@@ -568,7 +570,7 @@ function initializeTaskWorkspace(task) {
 function nodeExecutionContext(task, node) {
   const taskNodeDir = join(TASK_DIR, task.code, 'nodes', node.workspace_key)
   const contextDir = join(taskNodeDir, 'Context')
-  const nodeDefinitionDir = join(ROOT, 'workflow', 'nodes', node.workspace_key)
+  const nodeDefinitionDir = join(PLUGIN_ROOT, 'workflow', 'nodes', node.workspace_key)
   return {
     ...node,
     taskNodeDir,

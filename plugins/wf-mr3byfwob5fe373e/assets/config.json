@@ -3,10 +3,10 @@
   "displayName": "小红书创作",
   "shortDescription": "面向固定小红书账号的单篇图文笔记生产流程",
   "longDescription": "面向固定小红书账号的单篇图文笔记生产流程",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "monetizationMode": "free",
   "apiBase": "http://127.0.0.1:3000",
-  "publicationVersionId": "70711680283182080",
+  "publicationVersionId": "70832667121157120",
   "brandColor": "#2563EB",
   "logoPath": "/plugin-assets/logo.jpg",
   "profileEndpoint": "/creator-commission/profiles/1"

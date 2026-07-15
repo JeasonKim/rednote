@@ -1,14 +1,14 @@
 {
   "userId": "1",
-  "displayName": "Zara",
-  "avatarOssFileKey": "creator-profile-assets/user-1/avatar/20260713100421643-70092950419276800-c13c2845d24a.jpg",
-  "avatarUrl": "https://oss.penstairs.com/creator-profile-assets/user-1/avatar/20260713100421643-70092950419276800-c13c2845d24a.jpg",
-  "bio": "我做有态度的 skills 和产品。我没有传统的工程背景（到现在也不会写一行代码），但借助 coding agent，我把很多想法变成了现实。对我来说，代码是一种自我表达的媒介。",
+  "displayName": "老徐说AI",
+  "avatarOssFileKey": "creator-profile-assets/user-1/avatar/20260715110321933-70832575219762176-9f23e370b3f1.webp",
+  "avatarUrl": "https://oss.penstairs.com/creator-profile-assets/user-1/avatar/20260715110321933-70832575219762176-9f23e370b3f1.webp",
+  "bio": "致力于把AI真实落地，不讲AI故事。已服务30+博主及MCN机构。（持续增长ing）",
   "links": [
     {
       "platform": "github",
-      "url": "https://github.com/zarazhangrui",
-      "label": "Twitter"
+      "url": "https://github.com/xuntianx",
+      "label": "Github"
     },
     {
       "platform": "x",
@@ -17,9 +17,9 @@
     },
     {
       "platform": "website",
-      "url": "http://www.zarazhang.com",
-      "label": "个人网页"
+      "url": "https://skillflow.run",
+      "label": "官网"
     }
   ],
-  "revision": 5
+  "revision": 6
 }

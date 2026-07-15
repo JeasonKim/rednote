@@ -30,9 +30,9 @@ When a user gives you this repository URL and asks to install a plugin, treat th
 
 6. After installation, tell the user to start a new Codex task so the plugin is loaded.
 
-Repository: [`JeasonKim/rednote`](https://github.com/JeasonKim/rednote)  
-Marketplace: `jeasonkim-plugins`  
-Default ref: `main`
+- Repository: [`JeasonKim/rednote`](https://github.com/JeasonKim/rednote)
+- Marketplace: `jeasonkim-plugins`
+- Default ref: `main`
 
 ## Available Plugins
 
