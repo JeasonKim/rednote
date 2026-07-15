@@ -274,7 +274,7 @@ function workflowDashboardWidgetHtml() {
     mcpHostBridgeScript(),
     '</script>'
   ].join('\n')
-  if (html.includes('</head>')) return html.replace('</head>', bridge + '\n</head>')
+  if (html.includes('</head>')) return html.replace('</head>', () => bridge + '\n</head>')
   console.warn('[branded-skillflow] dashboard HTML has no closing head tag; MCP bridge prepended')
   return bridge + '\n' + html
 }
