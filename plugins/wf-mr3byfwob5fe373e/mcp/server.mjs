@@ -690,7 +690,7 @@ async function registerCommissionedInstall() {
 }
 
 function authSummary() {
-  if (CONFIG.monetizationMode !== 'commissioned') return { required: false, authenticated: true, user: null }
+  if (CONFIG.monetizationMode !== 'commissioned') return { required: false, authenticated: false, user: null }
   if (!hasCredentials()) return { required: true, authenticated: false, user: null }
   try {
     const credentials = credentialsOrThrow()

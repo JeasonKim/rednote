@@ -1,6 +1,6 @@
 {
   "name": "wf-mr3byfwob5fe373e",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "面向固定小红书账号的单篇图文笔记生产流程",
   "author": {
     "name": "老徐说AI"
@@ -15,7 +15,7 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "小红书创作",
+    "displayName": "老徐rednote",
     "shortDescription": "面向固定小红书账号的单篇图文笔记生产流程",
     "longDescription": "面向固定小红书账号的单篇图文笔记生产流程",
     "developerName": "老徐说AI",
@@ -26,9 +26,9 @@
       "Native workflow dashboard"
     ],
     "defaultPrompt": [
-      "Run 小红书创作 for my task.",
-      "Show the latest 小红书创作 task status.",
-      "Open the 小红书创作 dashboard."
+      "Run 老徐rednote for my task.",
+      "Show the latest 老徐rednote task status.",
+      "Open the 老徐rednote dashboard."
     ],
     "brandColor": "#2563EB",
     "composerIcon": "./assets/logo.jpg",

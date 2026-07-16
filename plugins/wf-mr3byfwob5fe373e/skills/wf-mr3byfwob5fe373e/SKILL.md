@@ -1,11 +1,11 @@
 ---
 name: wf-mr3byfwob5fe373e
-description: Run the bundled 小红书创作 workflow, advance ready DAG nodes, report node results, and show its branded native task dashboard beside the conversation.
+description: Run the bundled 老徐rednote workflow, advance ready DAG nodes, report node results, and show its branded native task dashboard beside the conversation.
 ---
 
-# 小红书创作
+# 老徐rednote
 
-This plugin runs without Skill Flow login or credit charging.
+This plugin runs without Skill Flow login, task execution fees, or creator usage commission. Official Skill Flow services may still consume the user's credits normally.
 
 ## Native dashboard contract
 
@@ -16,8 +16,7 @@ This plugin runs without Skill Flow login or credit charging.
 
 ## Run contract
 
-1. Call `create_task` once for each new user task. In commissioned plugins, this call charges the configured Skill Flow task fee.
+1. Call `create_task` once for each new user task.
 2. Call `start_task` and execute every returned ready node. When multiple nodes are ready, use sub-agents in parallel.
 3. Read each node's Context paths and follow its mission and verification contract.
 4. Call `complete_node` after verifying a node. Repeat `start_task` until the task completes.
-5. Use the returned `executionToken` as `x-skillflow-creator-execution-token` for bundled Skill Flow official-service calls.
